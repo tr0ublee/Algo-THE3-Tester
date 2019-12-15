@@ -51,7 +51,6 @@ void readWriteParams(ifstream& file,int& n, int** edgelist,double* scores){
 	ofstream outfile(YOUPATH+num+".txt");
 		if(outfile.is_open()){
 				scores= new double[n];
-				fill_n(scores, n, 0);
 				int retVal=Important(n,edgelist,scores);
 				outfile<<retVal<<endl;
 				for(int i=0;i<n;i++){
